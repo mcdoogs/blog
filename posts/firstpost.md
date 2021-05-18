@@ -7,7 +7,7 @@ tags:
 layout: layouts/post.njk
 ---
 
-# Post 1 - a beginning
+## Post 1 - a beginning
 
 Ahh, the inaugural blog post. Like a New Years' Resolution, it's a wholehearted commitment likely, if not inevitably, to be derailed by harsh reality. Until then, I hope to document some cool projects, share some thoughts, and strengthen the technical and compositional muscles required for a blog.
 

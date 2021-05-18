@@ -111,7 +111,7 @@ describe("check build output for a generic post", () => {
     });
 
     it("should have a header", () => {
-      expect(select("header > h1")).to.equal("Post 1 - a beginning");
+      expect(select("header > h1")).to.equal("Why start a blog, and why use 11ty?");
       expect(select("header aside")).to.match(/\d+ min read./);
       expect(select("header dialog", "id")).to.equal("message");
     });
@@ -139,27 +139,22 @@ describe("check build output for a generic post", () => {
         const pictures = Array.from(
           doc.querySelectorAll("article :not(aside) picture")
         );
-        const metaImage = select("meta[property='og:image']", "content");
         expect(images.length).to.greaterThan(0);
         expect(pictures.length).to.greaterThan(0);
         const img = images[0];
         const picture = pictures[0];
         const sources = Array.from(picture.querySelectorAll("source"));
-        expect(sources).to.have.length(3);
-        expect(img.src).to.match(/^\/img\/remote\/\w+-1920w\.jpg$/);
-        expect(metaImage).to.match(new RegExp(URL));
-        expect(metaImage).to.match(/\/img\/remote\/\w+\.jpg$/);
         const avif = sources.shift();
         const webp = sources.shift();
         const jpg = sources.shift();
         expect(jpg.srcset).to.match(
-          /\/img\/remote\/\w+-1920w.jpg 1920w, \/img\/remote\/\w+-1280w.jpg 1280w, \/img\/remote\/\w+-640w.jpg 640w, \/img\/remote\/\w+-320w.jpg 320w/
+          /\/img\/\w+-1920w.jpg 1920w, \/img\/\w+-1280w.jpg 1280w, \/img\/\w+-640w.jpg 640w, \/img\/\w+-320w.jpg 320w/
         );
         expect(webp.srcset).to.match(
-          /\/img\/remote\/\w+-1920w.webp 1920w, \/img\/remote\/\w+-1280w.webp 1280w, \/img\/remote\/\w+-640w.webp 640w, \/img\/remote\/\w+-320w.webp 320w/
+          /\/img\/\w+-1920w.webp 1920w, \/img\/\w+-1280w.webp 1280w, \/img\/\w+-640w.webp 640w, \/img\/\w+-320w.webp 320w/
         );
         expect(avif.srcset).to.match(
-          /\/img\/remote\/\w+-1920w.avif 1920w, \/img\/remote\/\w+-1280w.avif 1280w, \/img\/remote\/\w+-640w.avif 640w, \/img\/remote\/\w+-320w.avif 320w/
+          /\/img\/\w+-1920w.avif 1920w, \/img\/\w+-1280w.avif 1280w, \/img\/\w+-640w.avif 640w, \/img\/\w+-320w.avif 320w/
         );
         expect(jpg.type).to.equal("image/jpeg");
         expect(webp.type).to.equal("image/webp");
@@ -183,7 +178,7 @@ describe("check build output for a generic post", () => {
         const obj = JSON.parse(json);
         expect(obj.url).to.equal(POST_URL);
         expect(obj.description).to.equal(
-          "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster..."
+          "Post 1 - a beginning # Ahh, the inaugural blog post. Like a New Years&#39; Resolution, it&#39;s a wholehearted commitment likely, if not inevitably,..."
         );
         expect(obj.image.length).to.be.greaterThan(0);
         obj.image.forEach((url, index) => {
