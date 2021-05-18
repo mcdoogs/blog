@@ -15,7 +15,7 @@ Ahh, the inaugural blog post. Like a New Years' Resolution, it's a wholehearted 
 | :---: |
 | Ada the cat hanging out as I start writing this. Ulterior motive: testing to make sure images are working correctly. |
 
-I've always loved writing. Once I got into development, writing documentation for projects quickly became a source of great satisfaction. The humble "readme.md" file that a new project often starts with, and is frequently neglected, became a personal challenge to fit the essence of the project into a concise and friendly format. This blog is kind of an attempt to be able to just do *more of that*, but about anything I find interesting, and in a more casual format.
+I've always loved writing. Once I got into development, writing documentation for projects quickly became a source of great satisfaction. The humble `readme.md` file that a new project often starts with, and is frequently neglected, became a personal challenge to fit the essence of the project into a concise and friendly format. This blog is kind of an attempt to be able to just do *more of that*, but about anything I find interesting, and in a more casual format.
 
 ## The tech
 
