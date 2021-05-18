@@ -44,14 +44,11 @@ describe("check build output for a generic post", () => {
     });
 
     it("should have metadata", () => {
-      assert.equal(select("title"), "This is my first post.");
-      expect(select("meta[property='og:image']", "content")).to.match(
-        /\/img\/remote\/\w+.jpg/
-      );
+      assert.equal(select("title"), "Why start a blog, and why use 11ty?");
       assert.equal(select("link[rel='canonical']", "href"), POST_URL);
       assert.equal(
         select("meta[name='description']", "content"),
-        "This is a post on My Blog about agile frameworks."
+        "Initial thoughts on this site."
       );
     });
 
@@ -114,14 +111,14 @@ describe("check build output for a generic post", () => {
     });
 
     it("should have a header", () => {
-      expect(select("header > h1")).to.equal("This is my first post.");
+      expect(select("header > h1")).to.equal("Post 1 - a beginning");
       expect(select("header aside")).to.match(/\d+ min read./);
       expect(select("header dialog", "id")).to.equal("message");
     });
 
     it("should have a published date", () => {
-      expect(select("article time")).to.equal("01 May 2018");
-      expect(select("article time", "datetime")).to.equal("2018-05-01");
+      expect(select("article time")).to.equal("18 May 2021");
+      expect(select("article time", "datetime")).to.equal("2021-05-18");
     });
 
     it("should link to twitter with noopener", () => {

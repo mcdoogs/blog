@@ -1,30 +1,28 @@
 ---
-title: This is my first post.
-description: This is a post on My Blog about agile frameworks.
-date: 2018-05-01
+title: Why start a blog, and why use 11ty?
+description: Initial thoughts on this site.
+date: 2021-05-18
 tags:
-  - another-tag
+  - meta
 layout: layouts/post.njk
-image: https://cdn.pixabay.com/photo/2020/08/30/20/54/rice-field-5530707_1280.jpg
 ---
 
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+# Post 1 - a beginning
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+Ahh, the inaugural blog post. Like a New Years' Resolution, it's a wholehearted commitment likely, if not inevitably, to be derailed by harsh reality. Until then, I hope to document some cool projects, share some thoughts, and strengthen the technical and compositional muscles required for a blog.
 
-![An image](https://cdn.pixabay.com/photo/2020/08/30/20/54/rice-field-5530707_1280.jpg)
+| ![photo of Ada the cat](/img/ada1.jpg) |
+| :---: |
+| Ada the cat hanging out as I start writing this. Ulterior motive: testing to make sure images are working correctly. |
 
-## Section Header
+I've always loved writing. Once I got into development, writing documentation for projects quickly became a source of great satisfaction. The humble "readme.md" file that a new project often starts with, and is frequently neglected, became a personal challenge to fit the essence of the project into a concise and friendly format. This blog is kind of an attempt to be able to just do *more of that*, but about anything I find interesting, and in a more casual format.
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+## The tech
 
-``` text/2-3
-// this is a command
-function myCommand() {
-	let counter = 0;
-	counter++;
-}
+Most of my professional experience has been at varying levels of the 'back-end' tech stack. I'm most comfortable when working with servers, containers, back-end languages, and APIs - preferably from a shell. So, I decided to build this blog using tech that I'm decidedly *un*-comfortable with, while keeping it simple enough that I can mostly focus on writing and publishing. A jamstack site deployed to Netlify seemed to fit the bill (and tick the requisite buzzword boxes). I liked the looks of 11ty's documentation and community, and the [eleventy-high-performance-blog](https://www.industrialempathy.com/posts/eleventy-high-performance-blog/) project seemed to provide a great starting point that would work essentially 'out-of-the-box' and also be easily extensible and customizable.
 
-// Test with a line break above this line.
-console.log('Test');
-```
+I'm aiming to be able to write my posts straight in Markdown (I use [Writemonkey 3](https://writemonkey.com/wm3/), which is a beautiful distraction-free editor with full Markdown support), then deploy to Netlify on commit. I haven't actually deployed anything at the time of writing, but if you're reading this then it means it's working! (To some degree...)
+
+| ![another photo of Ada the cat](/img/ada2.jpg) |
+| :---: |
+| Ada shifted to a more comfortable spot during the writing process. |
