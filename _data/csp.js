@@ -41,6 +41,9 @@ const CSP = {
     ["style-src", quote("unsafe-inline")],
     // Images may also come from data-URIs.
     ["img-src", SELF, "data:"],
+    // Allow youtube embed
+    ['frame-src', 'https://www.youtube-nocookie.com/embed/'],
+    ['frame-src', 'https://www.youtube.com/embed/'],
 
     // To add new rules, add new array literals here or extend those above with
     // additional allowed elements.
